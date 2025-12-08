@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Tipografía Fluid con Clamp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-animation"></div>
+    
+    <main class="container">
+        <header class="hero">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <span class="gradient-text">Tipografía</span>
+                    <span class="highlight">Responsive Moderna</span>
+                </h1>
+                <p class="subtitle">
+                    Un sistema fluido usando <span class="code-inline">clamp()</span> y Custom Properties
+                </p>
+                <div class="stats">
+                    <div class="stat">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Fluido</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-expand-alt"></i>
+                        <span>Responsive</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-bolt"></i>
+                        <span>Moderno</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-visual">
+                <div class="typo-demo">
+                    <div class="size-indicator">
+                        <span class="current-size">Tamaño actual: <span id="fontSize">16px</span></span>
+                        <span class="viewport">Viewport: <span id="viewportWidth">1200px</span></span>
+                    </div>
+                    <div class="demo-slider">
+                        <input type="range" min="320" max="1920" value="1200" class="slider" id="viewportSlider">
+                        <div class="slider-labels">
+                            <span>Mobile</span>
+                            <span>Tablet</span>
+                            <span>Desktop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="separator">
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+        </div>
+
+        <article class="content-card">
+            <div class="article-header">
+                <h2 class="article-title">
+                    <i class="fas fa-wave-square"></i>
+                    Introducción a la Fluidez
+                </h2>
+                <div class="tag">CSS Moderno</div>
+            </div>
+            
+            <p class="lead">
+                Este párrafo demuestra el <strong class="highlight-text">cuerpo de texto fluido</strong>. 
+                Si redimensionas la ventana del navegador, notarás que el tamaño de la fuente 
+                no salta de un tamaño a otro (como pasaría con media queries tradicionales), 
+                sino que escala matemáticamente gracias a la función <code class="code-block">clamp()</code>.
+            </p>
+
+            <div class="example-container">
+                <div class="code-example">
+                    <h4><i class="fas fa-code"></i> Ejemplo de clamp()</h4>
+                    <pre><code>font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);</code></pre>
+                    <p class="code-explanation">
+                        <strong>Mínimo:</strong> 1rem (16px) • <strong>Valor dinámico:</strong> 0.9rem + 0.5vw • <strong>Máximo:</strong> 1.25rem (20px)
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="section-title">
+                <i class="fas fa-chart-line"></i>
+                Subtítulo de Nivel 3
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <div class="quote-card">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <blockquote class="styled-quote">
+                    "La tipografía en la web debe ser flexible, no rígida. El control pixel-perfect es una ilusión."
+                </blockquote>
+                <div class="quote-author">
+                    — Principio del Diseño Web Moderno
+                </div>
+            </div>
+
+            <h4 class="sub-heading">
+                <i class="fas fa-layer-group"></i>
+                Subtítulo de Nivel 4
+            </h4>
+            <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h5>Escalado Fluido</h5>
+                    <p>Transiciones suaves entre tamaños sin saltos abruptos</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h5>Responsive Total</h5>
+                    <p>Se adapta a cualquier dispositivo y resolución</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h5>Personalizable</h5>
+                    <p>Variables CSS para fácil personalización</p>
+                </div>
+            </div>
+        </article>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-typo3"></i>
+                    <span>Tipografía Fluida</span>
+                </div>
+                <p class="footer-text">
+                    Ejercicio 4 • Diseño Moderno con CSS Clamp
+                </p>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-codepen"></i> CodePen</a>
+                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#"><i class="fas fa-code"></i> Ejemplos</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Script para el slider interactivo
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('viewportSlider');
+            const viewportWidth = document.getElementById('viewportWidth');
+            const fontSize = document.getElementById('fontSize');
+            const body = document.body;
+            
+            // Calcular tamaño de fuente basado en el viewport
+            function calculateFontSize(width) {
+                // Simulación de clamp(1rem, 0.9rem + 0.5vw, 1.25rem)
+                const vw = width / 100;
+                const baseSize = 16; // 1rem = 16px
+                const minSize = 16; // 1rem
+                const maxSize = 20; // 1.25rem
+                const dynamicSize = (0.9 * baseSize) + (0.5 * vw);
+                
+                return Math.min(Math.max(dynamicSize, minSize), maxSize).toFixed(1);
+            }
+            
+            slider.addEventListener('input', function() {
+                const width = this.value;
+                viewportWidth.textContent = width + 'px';
+                
+                // Calcular y mostrar el tamaño de fuente
+                const size = calculateFontSize(width);
+                fontSize.textContent = size + 'px';
+                
+                // Actualizar el ancho del contenedor principal para simular
+                document.querySelector('.container').style.width = Math.min(width, 1200) + 'px';
+            });
+            
+            // Inicializar valores
+            slider.dispatchEvent(new Event('input'));
+        });
+    </script>
+
+</body>
+</html>
