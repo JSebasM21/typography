@@ -3,199 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4: Tipografía Fluid con Clamp</title>
+    <title>🌓 NexusTheme | Control de Tema Futurista</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="background-animation"></div>
+    <!-- Fondo futurista -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
     
-    <main class="container">
-        <header class="hero">
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Header futurista -->
+        <header class="nexus-header">
             <div class="header-content">
-                <h1 class="main-title">
-                    <span class="gradient-text">Tipografía</span>
-                    <span class="highlight">Responsive Moderna</span>
-                </h1>
-                <p class="subtitle">
-                    Un sistema fluido usando <span class="code-inline">clamp()</span> y Custom Properties
-                </p>
-                <div class="stats">
-                    <div class="stat">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>Fluido</span>
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-palette"></i>
                     </div>
-                    <div class="stat">
-                        <i class="fas fa-expand-alt"></i>
-                        <span>Responsive</span>
-                    </div>
-                    <div class="stat">
-                        <i class="fas fa-bolt"></i>
-                        <span>Moderno</span>
+                    <div class="logo-text">
+                        <h1>Nexus<span>Theme</span></h1>
+                        <p class="tagline">Control de Tema Inteligente</p>
                     </div>
                 </div>
-            </div>
-            <div class="header-visual">
-                <div class="typo-demo">
-                    <div class="size-indicator">
-                        <span class="current-size">Tamaño actual: <span id="fontSize">16px</span></span>
-                        <span class="viewport">Viewport: <span id="viewportWidth">1200px</span></span>
+                
+                <div class="header-actions">
+                    <div class="theme-indicator">
+                        <div class="indicator-dot"></div>
+                        <span id="themeStatus">MODO CLARO</span>
                     </div>
-                    <div class="demo-slider">
-                        <input type="range" min="320" max="1920" value="1200" class="slider" id="viewportSlider">
-                        <div class="slider-labels">
-                            <span>Mobile</span>
-                            <span>Tablet</span>
-                            <span>Desktop</span>
+                    
+                    <button id="themeToggle" class="nexus-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-thumb">
+                                <i class="fas fa-sun" id="sunIcon"></i>
+                                <i class="fas fa-moon" id="moonIcon"></i>
+                            </div>
                         </div>
+                        <div class="toggle-glow"></div>
+                    </button>
+                    
+                    <div class="system-info">
+                        <i class="fas fa-microchip"></i>
+                        <span>THEME v2.1</span>
                     </div>
                 </div>
             </div>
         </header>
 
-        <div class="separator">
-            <div class="dot"></div>
-            <div class="line"></div>
-            <div class="dot"></div>
-        </div>
+        <!-- Contenido principal -->
+        <main class="nexus-main">
+            <!-- Panel de control -->
+            <section class="control-panel">
+                <div class="panel-header">
+                    <h2><i class="fas fa-sliders-h"></i> Panel de Control</h2>
+                    <div class="panel-badge active">
+                        <div class="pulse"></div>
+                        SISTEMA ACTIVO
+                    </div>
+                </div>
+                
+                <div class="panel-grid">
+                    <div class="panel-card feature-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Persistencia Inteligente</h3>
+                        </div>
+                        <p class="card-desc">Tu preferencia se guarda automáticamente en memoria persistente</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label">Confiabilidad</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">∞</span>
+                                <span class="stat-label">Duración</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel-card feature-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Transición Cuántica</h3>
+                        </div>
+                        <p class="card-desc">Cambios suaves con animaciones de partículas y efectos de luz</p>
+                        <div class="performance">
+                            <div class="perf-bar">
+                                <div class="perf-fill" style="width: 98%"></div>
+                            </div>
+                            <span class="perf-text">98% SMOOTH</span>
+                        </div>
+                    </div>
+                    
+                    <div class="panel-card feature-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Detección Automática</h3>
+                        </div>
+                        <p class="card-desc">Se adapta automáticamente a las preferencias de tu sistema</p>
+                        <div class="auto-badge">
+                            <i class="fas fa-check-circle"></i>
+                            AUTO-DETECT
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <article class="content-card">
-            <div class="article-header">
-                <h2 class="article-title">
-                    <i class="fas fa-wave-square"></i>
-                    Introducción a la Fluidez
-                </h2>
-                <div class="tag">CSS Moderno</div>
+            <!-- Vista previa de temas -->
+            <section class="theme-preview">
+                <div class="preview-header">
+                    <h2><i class="fas fa-eye"></i> Vista Previa en Tiempo Real</h2>
+                    <div class="preview-controls">
+                        <button class="preview-btn active" data-theme="light">
+                            <i class="fas fa-sun"></i> Claro
+                        </button>
+                        <button class="preview-btn" data-theme="dark">
+                            <i class="fas fa-moon"></i> Oscuro
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="preview-grid">
+                    <div class="preview-card">
+                        <div class="preview-visual">
+                            <div class="visual-bg" id="previewLight">
+                                <div class="visual-element"></div>
+                                <div class="visual-element"></div>
+                                <div class="visual-element"></div>
+                            </div>
+                        </div>
+                        <div class="preview-info">
+                            <h3>Tema Claro</h3>
+                            <p>Ideal para trabajo diurno y productividad</p>
+                            <div class="theme-stats">
+                                <span><i class="fas fa-battery-full"></i> Bajo consumo</span>
+                                <span><i class="fas fa-eye"></i> Lectura óptima</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-card">
+                        <div class="preview-visual">
+                            <div class="visual-bg" id="previewDark">
+                                <div class="visual-element"></div>
+                                <div class="visual-element"></div>
+                                <div class="visual-element"></div>
+                            </div>
+                        </div>
+                        <div class="preview-info">
+                            <h3>Tema Oscuro</h3>
+                            <p>Perfecto para uso nocturno y concentración</p>
+                            <div class="theme-stats">
+                                <span><i class="fas fa-battery-half"></i> Ahorro energía</span>
+                                <span><i class="fas fa-moon"></i> Reducción fatiga</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Código y estadísticas -->
+            <section class="code-section">
+                <div class="code-header">
+                    <h2><i class="fas fa-code"></i> Núcleo del Sistema</h2>
+                    <div class="lang-badge">
+                        <i class="fab fa-js"></i> JavaScript
+                    </div>
+                </div>
+                
+                <div class="code-container">
+                    <div class="code-editor">
+                        <div class="editor-header">
+                            <div class="editor-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="editor-title">theme-control.js</span>
+                        </div>
+                        <div class="editor-body">
+                            <pre><code>// NEXUS THEME CONTROL SYSTEM v2.1
+class ThemeController {
+    constructor() {
+        this.init();
+        this.initializeParticles();
+    }
+    
+    toggleTheme() {
+        const isDark = document.body.classList.toggle('dark-mode');
+        this.updateInterface(isDark);
+        this.savePreference(isDark);
+        this.triggerTransitionEffects();
+    }
+    
+    updateInterface(isDark) {
+        document.getElementById('themeStatus').textContent = 
+            isDark ? 'MODO OSCURO' : 'MODO CLARO';
+        // Efectos visuales adicionales...
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-panel">
+                        <div class="stat-card glow">
+                            <div class="stat-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-value">0.2s</div>
+                                <div class="stat-label">Transición</div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card glow">
+                            <div class="stat-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Estable</div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card glow">
+                            <div class="stat-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-value">∞</div>
+                                <div class="stat-label">Ciclos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Atajos y configuración -->
+            <section class="shortcuts-section">
+                <div class="shortcuts-header">
+                    <h2><i class="fas fa-keyboard"></i> Comandos del Sistema</h2>
+                    <div class="hotkey-badge">
+                        <i class="fas fa-bolt"></i> ATALHOS RÁPIDOS
+                    </div>
+                </div>
+                
+                <div class="shortcuts-grid">
+                    <div class="shortcut-item">
+                        <div class="key-combo">
+                            <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd>
+                        </div>
+                        <div class="shortcut-info">
+                            <h3>Alternar Tema</h3>
+                            <p>Cambia instantáneamente entre claro/oscuro</p>
+                        </div>
+                    </div>
+                    
+                    <div class="shortcut-item">
+                        <div class="key-combo">
+                            <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd>
+                        </div>
+                        <div class="shortcut-info">
+                            <h3>Modo Oscuro</h3>
+                            <p>Activa directamente el tema oscuro</p>
+                        </div>
+                    </div>
+                    
+                    <div class="shortcut-item">
+                        <div class="key-combo">
+                            <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd>
+                        </div>
+                        <div class="shortcut-info">
+                            <h3>Modo Claro</h3>
+                            <p>Activa directamente el tema claro</p>
+                        </div>
+                    </div>
+                    
+                    <div class="shortcut-item">
+                        <div class="key-combo">
+                            <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>
+                        </div>
+                        <div class="shortcut-info">
+                            <h3>Reiniciar</h3>
+                            <p>Restablece a preferencias del sistema</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer futurista -->
+        <footer class="nexus-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h3>NexusTheme</h3>
+                        <p>Sistema de Control de Tema v2.1</p>
+                    </div>
+                </div>
+                
+                <div class="footer-stats">
+                    <div class="footer-stat">
+                        <span class="stat-number" id="themeChanges">0</span>
+                        <span class="stat-label">Cambios de Tema</span>
+                    </div>
+                    <div class="footer-stat">
+                        <span class="stat-number" id="uptime">00:00:00</span>
+                        <span class="stat-label">Tiempo Activo</span>
+                    </div>
+                </div>
+                
+                <div class="footer-actions">
+                    <button class="action-btn" id="resetBtn">
+                        <i class="fas fa-redo"></i> Reiniciar
+                    </button>
+                    <button class="action-btn" id="aboutBtn">
+                        <i class="fas fa-info-circle"></i> Info
+                    </button>
+                </div>
             </div>
             
-            <p class="lead">
-                Este párrafo demuestra el <strong class="highlight-text">cuerpo de texto fluido</strong>. 
-                Si redimensionas la ventana del navegador, notarás que el tamaño de la fuente 
-                no salta de un tamaño a otro (como pasaría con media queries tradicionales), 
-                sino que escala matemáticamente gracias a la función <code class="code-block">clamp()</code>.
-            </p>
-
-            <div class="example-container">
-                <div class="code-example">
-                    <h4><i class="fas fa-code"></i> Ejemplo de clamp()</h4>
-                    <pre><code>font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);</code></pre>
-                    <p class="code-explanation">
-                        <strong>Mínimo:</strong> 1rem (16px) • <strong>Valor dinámico:</strong> 0.9rem + 0.5vw • <strong>Máximo:</strong> 1.25rem (20px)
-                    </p>
-                </div>
-            </div>
-
-            <h3 class="section-title">
-                <i class="fas fa-chart-line"></i>
-                Subtítulo de Nivel 3
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-
-            <div class="quote-card">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <blockquote class="styled-quote">
-                    "La tipografía en la web debe ser flexible, no rígida. El control pixel-perfect es una ilusión."
-                </blockquote>
-                <div class="quote-author">
-                    — Principio del Diseño Web Moderno
-                </div>
-            </div>
-
-            <h4 class="sub-heading">
-                <i class="fas fa-layer-group"></i>
-                Subtítulo de Nivel 4
-            </h4>
-            <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-            </p>
-
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <h5>Escalado Fluido</h5>
-                    <p>Transiciones suaves entre tamaños sin saltos abruptos</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <h5>Responsive Total</h5>
-                    <p>Se adapta a cualquier dispositivo y resolución</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h5>Personalizable</h5>
-                    <p>Variables CSS para fácil personalización</p>
-                </div>
-            </div>
-        </article>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-typo3"></i>
-                    <span>Tipografía Fluida</span>
-                </div>
-                <p class="footer-text">
-                    Ejercicio 4 • Diseño Moderno con CSS Clamp
-                </p>
-                <div class="footer-links">
-                    <a href="#"><i class="fab fa-codepen"></i> CodePen</a>
-                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="#"><i class="fas fa-code"></i> Ejemplos</a>
-                </div>
+            <div class="footer-bottom">
+                <p>Presiona el interruptor central para cambiar el tema • Sistema optimizado para todas las plataformas</p>
             </div>
         </footer>
-    </main>
+    </div>
 
-    <script>
-        // Script para el slider interactivo
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.getElementById('viewportSlider');
-            const viewportWidth = document.getElementById('viewportWidth');
-            const fontSize = document.getElementById('fontSize');
-            const body = document.body;
-            
-            // Calcular tamaño de fuente basado en el viewport
-            function calculateFontSize(width) {
-                // Simulación de clamp(1rem, 0.9rem + 0.5vw, 1.25rem)
-                const vw = width / 100;
-                const baseSize = 16; // 1rem = 16px
-                const minSize = 16; // 1rem
-                const maxSize = 20; // 1.25rem
-                const dynamicSize = (0.9 * baseSize) + (0.5 * vw);
-                
-                return Math.min(Math.max(dynamicSize, minSize), maxSize).toFixed(1);
-            }
-            
-            slider.addEventListener('input', function() {
-                const width = this.value;
-                viewportWidth.textContent = width + 'px';
-                
-                // Calcular y mostrar el tamaño de fuente
-                const size = calculateFontSize(width);
-                fontSize.textContent = size + 'px';
-                
-                // Actualizar el ancho del contenedor principal para simular
-                document.querySelector('.container').style.width = Math.min(width, 1200) + 'px';
-            });
-            
-            // Inicializar valores
-            slider.dispatchEvent(new Event('input'));
-        });
-    </script>
+    <!-- Efectos de partículas -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Modal de información -->
+    <div class="nexus-modal" id="infoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-info-circle"></i> Información del Sistema</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4>Especificaciones Técnicas</h4>
+                    <p>NexusTheme utiliza tecnologías modernas para un control de tema óptimo:</p>
+                    <ul>
+                        <li><strong>CSS Variables:</strong> Para gestión dinámica de colores</li>
+                        <li><strong>JavaScript ES6+:</strong> Para lógica avanzada</li>
+                        <li><strong>LocalStorage API:</strong> Para persistencia de datos</li>
+                        <li><strong>CSS Transitions:</strong> Para animaciones fluidas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
